@@ -17,12 +17,13 @@ add_executable(person_node src/person_node.cpp)
 add_executable(learn_auto src/learn_auto.cpp)
 add_executable(learn_shared_ptr src/learn_shared_ptr.cpp)
 add_executable(learn_lambda src/learn_lambda.cpp)
+add_executable(learn_function src/learn_function.cpp)
 # 3. 为 cpp_node 添加依赖
 # ament_target_dependencies(cpp_node rclcpp)
 ament_target_dependencies(person_node rclcpp)
 # 4. 将 cpp_node 复制到 install 目录
 install(TARGETS
-person_node learn_auto learn_shared_ptr learn_lambda
+person_node learn_auto learn_shared_ptr learn_lambda learn_function
 DESTINATION lib/${PROJECT_NAME}
 )
 # find_package(<dependency> REQUIRED)

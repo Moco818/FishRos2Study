@@ -4,3 +4,6 @@ build/
 log/
 browse.vc.db**
 git_id
+CMakeFiles/
+Makefile
+**.cmake

@@ -11,6 +11,7 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # 1. 查找 rclcpp 头文件和库
 find_package(rclcpp REQUIRED)
+include_directories(include)
 # 2. 添加可执行文件 cpp_node
 # add_executable(cpp_node src/cpp_node.cpp)
 add_executable(person_node src/person_node.cpp)
@@ -18,12 +19,13 @@ add_executable(learn_auto src/learn_auto.cpp)
 add_executable(learn_shared_ptr src/learn_shared_ptr.cpp)
 add_executable(learn_lambda src/learn_lambda.cpp)
 add_executable(learn_function src/learn_function.cpp)
+add_executable(learn_thread src/learn_thread.cpp)
 # 3. 为 cpp_node 添加依赖
 # ament_target_dependencies(cpp_node rclcpp)
 ament_target_dependencies(person_node rclcpp)
 # 4. 将 cpp_node 复制到 install 目录
 install(TARGETS
-person_node learn_auto learn_shared_ptr learn_lambda learn_function
+person_node learn_auto learn_shared_ptr learn_lambda learn_function learn_thread
 DESTINATION lib/${PROJECT_NAME}
 )
 # find_package(<dependency> REQUIRED)

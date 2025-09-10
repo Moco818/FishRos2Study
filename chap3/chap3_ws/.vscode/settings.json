@@ -11,5 +11,6 @@
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [],
+    "cmake.sourceDirectory": "/home/moco/FishRos2Study/chap3/chap3_ws/src/demo_cpp_topic"
 }

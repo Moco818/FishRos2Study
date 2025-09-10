@@ -1,0 +1,6 @@
+install/
+test/
+build/
+.vscode/
+log/
+git_id

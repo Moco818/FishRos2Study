@@ -1,12 +1,12 @@
 {
     "ROS2.distro": "humble",
     "python.autoComplete.extraPaths": [
-        "/home/moco/fishros/chap3/chap3_ws/install/demo_python_topic/lib/python3.10/site-packages",
+        "/home/moco/FishRos2Study/chap3/chap3_ws/install/demo_python_topic/lib/python3.10/site-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
     "python.analysis.extraPaths": [
-        "/home/moco/fishros/chap3/chap3_ws/install/demo_python_topic/lib/python3.10/site-packages",
+        "/home/moco/FishRos2Study/chap3/chap3_ws/install/demo_python_topic/lib/python3.10/site-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],

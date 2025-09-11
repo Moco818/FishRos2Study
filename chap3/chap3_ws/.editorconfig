@@ -1,0 +1,209 @@
+# 官方文档: https://editorconfig.org
+
+# 顶级配置（适用于整个项目）
+root = true
+
+# 通用配置（适用于所有文件）
+[*]
+# 缩进风格：space（空格）或 tab（制表符）
+indent_style = space
+# 缩进大小
+indent_size = 4
+# 换行符：lf（Unix）、cr（Mac）、crlf（Windows）
+end_of_line = lf
+# 字符集
+charset = utf-8
+# 是否删除行尾空白字符
+trim_trailing_whitespace = true
+# 是否在文件末尾插入一个空行
+insert_final_newline = true
+
+# 针对无扩展名文件
+[Makefile]
+indent_style = tab
+# Makefile 必须使用 tab 缩进
+
+# Python 文件配置
+[*.py]
+indent_size = 4
+# Python 通常使用 4 个空格缩进
+# 确保文件末尾有换行符（Python 推荐）
+insert_final_newline = true
+# 行长度限制（PEP 8 建议）
+max_line_length = 88
+# Python 注释和字符串中的引号样式（可选）
+# 注意：EditorConfig 本身不支持直接设置引号，但某些编辑器会读取此注释
+# 推荐使用双引号用于字符串，单引号用于字符（或反之，保持项目一致）
+# quote_type = double
+
+# Python 特殊文件
+[*.pyi]
+# Python 类型存根文件
+max_line_length = 100
+
+# JavaScript/TypeScript 配置
+[*.{js,ts,tsx}]
+indent_size = 2
+# JS/TS 通常使用 2 个空格缩进
+max_line_length = 100
+
+# JSON 配置
+[*.json]
+indent_size = 2
+# JSON 通常使用 2 个空格缩进
+insert_final_newline = true
+# JSON 不支持注释，但某些变体（如 JSONC）支持
+# 如果需要注释支持，使用 JSONC 扩展名
+[*.jsonc]
+indent_size = 2
+insert_final_newline = true
+
+# XML 配置
+[*.{xml}]
+indent_size = 2
+# XAML 通常使用 2 个空格缩进
+indent_style = space
+# XAML 必须使用空格缩进
+max_line_length = 100
+
+# YAML 配置
+[*.{yml,yaml}]
+indent_size = 2
+# YAML 通常使用 2 个空格缩进
+indent_style = space
+# YAML 必须使用空格缩进
+max_line_length = 100
+
+# Markdown 配置
+[*.md]
+trim_trailing_whitespace = false
+# Markdown 行尾空格有特殊含义（强制换行）
+max_line_length = 100
+# Markdown 行长度限制
+
+# HTML 配置
+[*.{html,htm}]
+indent_size = 2
+# HTML 通常使用 2 个空格缩进
+max_line_length = 120
+
+# CSS/SCSS/Less 配置
+[*.{css,scss,sass,less}]
+indent_size = 2
+# CSS 预处理器通常使用 2 个空格
+max_line_length = 100
+
+# Shell 脚本配置
+[*.sh]
+indent_size = 4
+# Shell 脚本通常使用 4 个空格
+max_line_length = 80
+# Shell 脚本建议 80 字符行宽
+
+# Dockerfile 配置
+[Dockerfile]
+indent_style = space
+indent_size = 4
+# Dockerfile 通常使用 4 个空格
+
+# 配置文件（INI/YAML/JSON）
+[*.config]
+indent_size = 2
+# 配置文件通常使用 2 个空格
+
+# 忽略构建输出和依赖目录
+[{package-lock.json,yarn.lock,Pipfile.lock,poetry.lock}]
+indent_style = space
+indent_size = 2
+# 锁文件保持一致性
+
+# 忽略二进制文件和生成文件
+[{*.min.js,*.min.css,bundle.js,bundle.css}]
+max_line_length = off
+# 压缩文件无需行长度限制
+
+# 忽略依赖目录
+[node_modules/]
+indent_style = ignore
+# 忽略 node_modules 目录
+
+[venv/]
+indent_style = ignore
+# 忽略 Python 虚拟环境
+
+[.venv/]
+indent_style = ignore
+# 忽略 Python 虚拟环境（另一种命名）
+
+[__pycache__/]
+indent_style = ignore
+# 忽略 Python 缓存
+
+[dist/]
+indent_style = ignore
+# 忽略构建输出
+
+[build/]
+indent_style = ignore
+# 忽略构建输出
+
+# ROS2 特殊文件（如果使用 ROS2）
+[*.{launch,ros2}]
+indent_size = 4
+indent_style = space
+# ROS2 launch 文件使用 4 个空格
+
+# C++ 配置（如果使用）
+[*.{cpp,hpp,cc,hh,cxx,hxx,c,h}]
+indent_style = tab
+indent_size = 4
+# C++ 通常使用 4 个空格
+max_line_length = 100
+
+# Java 配置（如果使用）
+[*.java]
+indent_size = 4
+# Java 通常使用 4 个空格
+max_line_length = 100
+
+# Go 配置（如果使用）
+[*.go]
+indent_style = tab
+# Go 使用 tab 缩进
+indent_size = 4
+# 但 tab 宽度为 4 个字符
+
+# Rust 配置（如果使用）
+[*.rs]
+indent_size = 4
+# Rust 使用 4 个空格
+
+# 忽略 Git 目录
+[.git/]
+indent_style = ignore
+
+# 忽略 IDE 配置文件（可选）
+[*.{idea,iml,project,settings}]
+indent_size = 2
+# IDE 配置文件通常使用 2 个空格
+
+# 忽略 VSCode 设置（可选）
+# [.vscode/]
+# indent_size = 2
+
+# 忽略 JetBrains IDE 设置（可选）
+[.idea/]
+indent_size = 2
+
+# 忽略 macOS 系统文件
+[*.{DS_Store,localized}]
+indent_style = ignore
+
+# 忽略 Windows 系统文件
+[*.{desktop.ini,Thumbs.db}]
+indent_style = ignore
+
+# 忽略日志文件
+[*.log]
+insert_final_newline = false
+max_line_length = off

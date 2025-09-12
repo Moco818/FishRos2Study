@@ -17,12 +17,13 @@ include_directories(include)
 # 2. 添加可执行文件
 # add_executable(cpp_node src/cpp_node.cpp)
 add_executable(turtle_circle src/turtle_circle.cpp)
+add_executable(turtle_control src/turtle_control.cpp)
 # 3. 添加依赖
 # ament_target_dependencies(cpp_node rclcpp)
 ament_target_dependencies(turtle_circle rclcpp geometry_msgs)
 # 4. 复制到 install 目录
 install(TARGETS
-  turtle_circle
+  turtle_circle turtle_control
   DESTINATION lib/${PROJECT_NAME}
 )
 

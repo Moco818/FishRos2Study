@@ -9,7 +9,6 @@
                 "/opt/ros/humble/include/**",
                 "/home/moco/FishRos2Study/chap3/chap3_ws/src/demo_cpp_topic/include/**",
                 "/usr/include/**",
-                "/opt/ros/humble/include/geometry_msgs"
             ],
             "name": "ros2",
             "intelliSenseMode": "gcc-x64",
